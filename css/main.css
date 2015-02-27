@@ -247,6 +247,9 @@ body #container #content ul li {
 body #container #content ul li.active .intro {
   color: #d01f45;
 }
+body #container #content ul li.prophets .head {
+  background: url('img/img-prophets.png') left center no-repeat !important;
+}
 body #container #content ul li .copy {
   width: 100%;
   position: relative;
