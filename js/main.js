@@ -113,7 +113,7 @@ $(document).ready(function(){
 
 	if (  curr_date==28 && curr_month==2 ) {
 		$("#content li").hide();
-		$("#content li.p31").show();
+		$("#content li.p31").addClass("now").show();
 	}
 
 	if (  curr_date==25 && curr_month==3 ) {
