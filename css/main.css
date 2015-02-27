@@ -389,7 +389,7 @@ body #container #content ul li .head.peter {
 }
 .konami-overlay img {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   margin-left: -60px;
   margin-top: -60px;
@@ -408,7 +408,7 @@ body #container #content ul li .head.peter {
   text-align: center;
   line-height: 40px;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   width: 210px;
   margin-left: -115px;
