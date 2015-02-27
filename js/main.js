@@ -116,7 +116,7 @@ $(document).ready(function(){
 		$("#content li.p31").addClass("now").show();
 	}
 
-	if (  curr_date==25 && curr_month==3 ) {
+	if (  curr_date==1 && curr_month==3 ) {
 		$("#content li").hide();
 		$("#content li.p30").addClass("now").show().nextAll().addClass("now").show();
 	}
