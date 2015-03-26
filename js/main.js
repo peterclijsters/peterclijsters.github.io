@@ -293,7 +293,24 @@ $(document).ready(function(){
 	$("#content li.start").show();	
 
 
+});
 
 
 
+$(document).ready(function() {
+    var t = [],
+        e = "38,38,40,40,37,39,37,39,66,65";
+    $(document).keydown(function(n) {
+        if (t.push(n.keyCode), t.toString().indexOf(e) >= 0) {
+      	$(".konami-overlay").fadeOut(1000);
+      	$(".konami-overlay img").animate({
+      		width:500,
+      		height:500,
+      		marginLeft:-250,
+      		marginTop:-250
+      	},1000);
+      	$(".konami-active").removeClass("konami-active");
+        }
+        27 == n.keyCode && ($(".nyanCatBg").empty(), nc_audio.pause())
+    }), $(".thank-you").is(":visible") && ($(".planet").hide(), $("figure").hide())
 });
