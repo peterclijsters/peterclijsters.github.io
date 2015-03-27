@@ -300,8 +300,14 @@ $(document).ready(function(){
 $(document).ready(function() {
     var t = [],
         e = "38,38,40,40,37,39,37,39,66,65";
+
     $(document).keydown(function(n) {
-        if (t.push(n.keyCode), t.toString().indexOf(e) >= 0) {
+    	checkKonami(n.keyCode)
+    })
+
+    function checkKonami(key){
+    	console.log(key);
+        if (t.push(key), t.toString().indexOf(e) >= 0) {
       	$(".konami-overlay").fadeOut(1000);
       	$(".konami-overlay img").animate({
       		width:500,
@@ -311,6 +317,24 @@ $(document).ready(function() {
       	},1000);
       	$(".konami-active").removeClass("konami-active");
         }
-        27 == n.keyCode && ($(".nyanCatBg").empty(), nc_audio.pause())
-    }), $(".thank-you").is(":visible") && ($(".planet").hide(), $("figure").hide())
+    }
+
+    $(".btn-top").on("click",function(){
+	checkKonami(38);
+    })
+    $(".btn-bottom").on("click",function(){
+	checkKonami(40);
+    })
+    $(".btn-left").on("click",function(){
+	checkKonami(37);
+    })
+    $(".btn-right").on("click",function(){
+	checkKonami(39);
+    })
+    $(".btn-a").on("click",function(){
+	checkKonami(65);
+    })
+    $(".btn-b").on("click",function(){
+	checkKonami(66);
+    })
 });
